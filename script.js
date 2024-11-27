@@ -176,7 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", revealOnScroll);
 });
 
-// Sélectionner toutes les cartes de projet
 const projectCards = document.querySelectorAll('.project-card');
 const previewImage = document.querySelector('.image-preview img');
 
@@ -192,4 +191,12 @@ projectCards.forEach(card => {
     });
 });
 
+const scrollDownArrow = document.querySelector('.scroll-down');
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        scrollDownArrow.classList.add('hidden');
+    } else {
+        scrollDownArrow.classList.remove('hidden');
+    }
+});
