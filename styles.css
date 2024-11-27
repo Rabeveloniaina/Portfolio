@@ -419,6 +419,7 @@ section {
     }
     .image-preview {
         height: 200px;
+        margin: auto;
     }
 }
 
